@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginBottom="@dimen/screen_edge_margin"
+    android:layout_marginLeft="@dimen/screen_edge_margin"
+    android:layout_marginRight="@dimen/screen_edge_margin">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ownerImage"
+            android:layout_width="@dimen/owner_image_size"
+            android:layout_height="@dimen/owner_image_size"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            tools:src="@mipmap/ic_launcher" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ownerImage"
+            android:layout_toRightOf="@id/ownerImage"
+            android:divider="@drawable/divider"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="@dimen/screen_edge_margin_half"
+            android:showDividers="middle">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_save_20dp"
+                android:drawablePadding="@dimen/screen_edge_margin_half"
+                android:drawableStart="@drawable/ic_save_20dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                tools:text="name" />
+
+            <TextView
+                android:id="@+id/star"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_grade_20dp"
+                android:drawablePadding="@dimen/screen_edge_margin_half"
+                android:drawableStart="@drawable/ic_grade_20dp"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                tools:text="10" />
+
+            <TextView
+                android:id="@+id/fork"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_content_copy_20dp"
+                android:drawablePadding="@dimen/screen_edge_margin_half"
+                android:drawableStart="@drawable/ic_content_copy_20dp"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                tools:text="10" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

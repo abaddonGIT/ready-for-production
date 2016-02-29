@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="activity_horizontal_margin">64dp</dimen>
+    <dimen name="screen_edge_margin">24dp</dimen>
+    <dimen name="screen_edge_margin_half">12dp</dimen>
+    <dimen name="owner_image_size">120dp</dimen>
+</resources>

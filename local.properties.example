@@ -1,0 +1,2 @@
+github.token="<YOUR_GITHUB_TOKEN>" # https://github.com/settings/tokens
+github.user="<YOUR_GITHUB_ID>"

@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="screen_edge_margin">16dp</dimen>
+    <dimen name="screen_edge_margin_half">8dp</dimen>
+    <dimen name="owner_image_size">96dp</dimen>
+
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="screen_edge_margin_side">0dp</dimen>
+</resources>

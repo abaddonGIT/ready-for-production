@@ -1,0 +1,111 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+buildscript {
+    ext {
+        support_version = '23.1.1'
+        kotlin_version = '1.0.0'
+        retrofit_version = '2.0.0-beta4'
+        okhttp_version = '3.2.0'
+        dagger_version = '2.0.2'
+    }
+
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "io.github.importre.kdr"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "0.1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix '.debug'
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+        main.java.srcDirs += 'src/debug/kotlin'
+        test.java.srcDirs += 'src/test/kotlin'
+        androidTest.java.srcDirs += 'src/androidTest/kotlin'
+    }
+
+    Properties props = new Properties()
+    props.load(new FileInputStream(file('../local.properties')))
+    def githubToken = props.getProperty("github.token", "\"\"")
+    def githubUser = props.getProperty("github.user", "\"importre\"")
+    applicationVariants.all { variant ->
+        variant.buildConfigField "String", "GITHUB_TOKEN", githubToken
+        variant.buildConfigField "String", "GITHUB_USER", githubUser
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    dexOptions {
+        incremental true
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile "com.google.code.gson:gson:2.6.1"
+    compile "com.squareup.picasso:picasso:2.5.2"
+    compile "io.reactivex:rxandroid:1.1.0"
+
+    compile "com.android.support:appcompat-v7:$support_version"
+    compile "com.android.support:cardview-v7:$support_version"
+    compile "com.android.support:design:$support_version"
+    compile "com.android.support:recyclerview-v7:$support_version"
+    compile "com.android.support:support-annotations:$support_version"
+
+    compile "org.jetbrains.kotlin:kotlin-jdk-annotations:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    compile "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
+    compile "com.squareup.okhttp3:okhttp:$okhttp_version"
+
+    compile "com.squareup.retrofit2:adapter-rxjava:$retrofit_version"
+    compile "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    compile "com.squareup.retrofit2:retrofit:$retrofit_version"
+
+    compile "com.google.dagger:dagger:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+    provided "org.glassfish:javax.annotation:10.0-b28"
+
+    testCompile "junit:junit:4.12"
+    testCompile "org.jetbrains.kotlin:kotlin-test:$kotlin_version"
+    testCompile "org.mockito:mockito-all:1.10.19"
+
+    androidTestCompile "com.android.support:support-annotations:$support_version"
+    androidTestCompile "com.android.support.test:rules:0.4"
+    androidTestCompile "com.android.support.test:runner:0.4"
+}
+
+kapt {
+    generateStubs = true
+}
