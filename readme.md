@@ -1,6 +1,8 @@
 # KDR
 
-> Kotlin-Dagger2-Rx
+> Kotlin / Dagger2 / Rx  
+> and  
+> Android / Retrofit2 / OkHttp3 / Mockito
 
 ![screenshots][screenshots]
 
@@ -76,7 +78,7 @@ Apache 2.0 © [Jaewe Heo](http://import.re)
 
 
 
-[screenshots]: assets/screenshots.png
+[screenshots]: https://cloud.githubusercontent.com/assets/1744446/13403243/731330d0-df57-11e5-81b2-70991cff458d.png
 [kotlin]: https://kotlinlang.org/
 [dagger2]: https://github.com/google/dagger
 [rx-android]: https://github.com/ReactiveX/RxAndroid
