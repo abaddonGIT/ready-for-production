@@ -1,4 +1,4 @@
-# KDR
+# Ready for Production
 
 > Kotlin / Dagger2 / Rx  
 > and  
