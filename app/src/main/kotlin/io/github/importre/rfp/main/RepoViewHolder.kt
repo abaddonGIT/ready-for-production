@@ -7,6 +7,7 @@ import io.github.importre.rfp.R
 import io.github.importre.rfp.api.repo.Repository
 import io.github.importre.rfp.ext.getTagAsImageView
 import io.github.importre.rfp.ext.getTagAsTextView
+import io.github.importre.rfp.ext.join
 import io.github.importre.rfp.ext.loadUrl
 
 class RepoViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
@@ -15,7 +16,7 @@ class RepoViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         view.run {
             findViewById(R.id.fg).setOnClickListener {
                 val message = repo.run {
-                    "$fullName : $language"
+                    "\n".join(fullName, language)
                 }
                 Toast.makeText(view.context, message, Toast.LENGTH_SHORT).show()
             }
