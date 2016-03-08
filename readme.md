@@ -37,6 +37,7 @@
 - `ActivityExt`
 - `ImageViewExt`
 - `ViewExt`
+- `StringExt`
 
 
 ## Usage
