@@ -9,5 +9,5 @@ interface MainView {
 
     fun showError(error: Throwable)
 
-    fun showRepos(repos: ArrayList<Repository>)
+    fun showRepos(repositories: ArrayList<Repository>)
 }

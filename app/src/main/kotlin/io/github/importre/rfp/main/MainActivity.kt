@@ -94,11 +94,11 @@ class MainActivity : AppCompatActivity(), MainView {
         error.printStackTrace()
     }
 
-    override fun showRepos(repos: ArrayList<Repository>) {
+    override fun showRepos(repositories: ArrayList<Repository>) {
         adapter.run {
-            this.repos.clear()
-            this.repos.addAll(repos)
-            this.notifyDataSetChanged()
+            repos.clear()
+            repos.addAll(repositories)
+            notifyDataSetChanged()
         }
     }
 }
