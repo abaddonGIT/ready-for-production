@@ -22,6 +22,7 @@ class RepoAdapter(private val context: Context) : RecyclerView.Adapter<RepoViewH
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): RepoViewHolder? {
         val inflater = LayoutInflater.from(context)
         val view = inflater.inflate(R.layout.layout_repo_card, parent, false).apply {
+            setTag(R.id.fg, findViewById(R.id.fg))
             setTag(R.id.name, findViewById(R.id.name))
             setTag(R.id.star, findViewById(R.id.star))
             setTag(R.id.fork, findViewById(R.id.fork))
