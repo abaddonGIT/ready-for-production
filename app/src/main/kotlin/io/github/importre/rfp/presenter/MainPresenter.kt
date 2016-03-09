@@ -28,7 +28,7 @@ class MainPresenter(private val api: Github,
      * Loads **repositories** of https://github.com/[user]
      *
      * @param user Account name of [Github](https://github.com).
-     * @param force `true` to load repositories by force. Default by `false`
+     * @param force `true` to load repositories by force. By default `false`.
      */
     @JvmOverloads
     fun loadRepos(user: String, force: Boolean = false) {
