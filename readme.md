@@ -33,7 +33,6 @@
 - `apply`
     - [`ApiModule.kt`](https://goo.gl/JLsjY7)
     - [`RepoAdapter.kt`](https://goo.gl/S4FRNx)
-    - []()
 - `data`
     - [`Repository.kt`](https://goo.gl/Je8X8b)
 - `lazy`
