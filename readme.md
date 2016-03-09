@@ -26,18 +26,28 @@
 ### Keywords
 
 - `let`
+    - [`RepoAdapter.kt`](https://goo.gl/HmcXz2)
 - `run`
+    - [`MainActivity.kt`](https://goo.gl/42XJbm)
+    - [`RepoViewHolder.kt`](https://goo.gl/4yfL0W)
 - `apply`
+    - [`ApiModule.kt`](https://goo.gl/JLsjY7)
+    - [`RepoAdapter.kt`](https://goo.gl/S4FRNx)
+    - []()
 - `data`
+    - [`Repository.kt`](https://goo.gl/Je8X8b)
 - `lazy`
+    - [`MainActivkty.kt`](https://goo.gl/dmrO3C)
 - `lateinit`
+    - [`MainActivkty.kt`](https://goo.gl/9U6B1u)
+    - [`MainPresenterTest.kt`](https://goo.gl/RKpniC)
 
 #### Extensions
 
-- `ActivityExt`
-- `ImageViewExt`
-- `ViewExt`
-- `StringExt`
+- [`ActivityExt`](https://goo.gl/iAbFzm)
+- [`ImageViewExt`](https://goo.gl/tQYWBR)
+- [`ViewExt`](https://goo.gl/6fYVd6)
+- [`StringExt`](https://goo.gl/XYwBC0)
 
 
 ## Usage
