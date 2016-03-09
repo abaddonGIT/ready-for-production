@@ -24,6 +24,13 @@ class MainPresenter(private val api: Github,
         this.view = null
     }
 
+    /**
+     * Loads **repositories** of https://github.com/[user]
+     *
+     * @param user Account name of [Github](https://github.com).
+     * @param force `true` to load repositories by force. Default by `false`
+     */
+    @JvmOverloads
     fun loadRepos(user: String, force: Boolean = false) {
         if (force) {
             subscription?.unsubscribe()
@@ -57,7 +64,7 @@ class MainPresenter(private val api: Github,
             override fun onError(error: Throwable) {
                 view?.showLoading(false)
                 view?.showError(error)
-           }
+            }
 
             override fun onCompleted() {
                 view?.showLoading(false)
