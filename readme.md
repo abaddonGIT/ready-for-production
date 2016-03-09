@@ -9,7 +9,7 @@
 
 ## Slide
 
-- :kr: Ready for Production (TBD)
+- :kr: [Ready for Production][deck]
 
 
 ## Stack
@@ -63,7 +63,7 @@ github.user="<YOUR_GITHUB_ID>"
 ### Test
 
 ```sh
-$ ./gradlew check
+$ ./gradlew test
 ```
 
 
@@ -89,6 +89,7 @@ Apache 2.0 © [Jaewe Heo](http://import.re)
 
 
 [screenshots]: https://cloud.githubusercontent.com/assets/1744446/13405413/9d3ad566-df61-11e5-9add-d4cebb275fe9.png
+[deck]: https://speakerdeck.com/importre/ready-for-production
 [kotlin]: https://kotlinlang.org/
 [dagger2]: https://github.com/google/dagger
 [rx-android]: https://github.com/ReactiveX/RxAndroid
