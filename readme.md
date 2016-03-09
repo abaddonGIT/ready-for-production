@@ -45,7 +45,6 @@
 
 - [`ActivityExt`](https://goo.gl/iAbFzm)
 - [`ImageViewExt`](https://goo.gl/tQYWBR)
-- [`ViewExt`](https://goo.gl/6fYVd6)
 - [`StringExt`](https://goo.gl/XYwBC0)
 
 
